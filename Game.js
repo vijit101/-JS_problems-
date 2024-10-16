@@ -1,6 +1,44 @@
 //Do not alter the starter code
 function main(){
 
+    function Character(health,strength,agility){
+        this.health = health;
+        this.strength = strength;
+        this.agility = agility;
+    }
+
+    function Warrior(health,strength,agility,weaponType){
+        Character.call(this,health,strength,agility);
+        this.weaponType = weaponType;
+    }
+
+    function Mage(health,strength,agility,spellType){
+        Character.call(this,health,strength,agility);
+        this.spellType = spellType;
+    }
+
+    function Archer(health,strength,agility,arrowType){
+        Character.call(this,health,strength,agility);
+        this.arrowType = arrowType;
+    }
+
+    function Hero(health,strength,agility,spellType,weaponType,specialAbility){
+         
+    
+    // Create instances of Mage and Archer
+    Mage.call(this, health, strength, agility, spellType);
+    Warrior.call(this, health, strength, agility, weaponType);
+        
+        
+        this.specialAbility = specialAbility;
+    }
+
+    function Enemy(health,strength,agility,enemyType){
+        Character.call(this,health,strength,agility);
+        this.enemyType = enemyType;
+    }
+    
+    
     //Create Character constructor function
     
     //Create Warrior ,Mage, Enemy and Archer constructor fntion inheriting Character
